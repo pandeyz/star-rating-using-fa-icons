@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Star Rating</title>
+</head>
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style type="text/css">
+	.red {
+		color: red;
+	}
+	</style>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(document).on('click', '.assign_rating', function(){
+			// Get the start index
+			let start 	= 0;
+
+			// Get the index of clicked element and add 1 to it to make it count
+			let count 	= $('.assign_rating').index(this) + 1;
+
+			// Remove the already filled stars
+			$('.assign_rating').removeClass('red');
+			
+			// Fill the stars with the given range
+			$('.assign_rating').slice(start, count).addClass('fa fa-star red');
+		});
+	});
+	</script>
+
+<body>
+
+	<ul class="ratingstar">
+		<li><a href="javascript:void(0);"><i class="fa fa-star assign_rating" aria-hidden="true"></i></a></li>
+		<li><a href="javascript:void(0);"><i class="fa fa-star assign_rating" aria-hidden="true"></i></a></li>
+		<li><a href="javascript:void(0);"><i class="fa fa-star assign_rating" aria-hidden="true"></i></a></li>
+		<li><a href="javascript:void(0);"><i class="fa fa-star assign_rating" aria-hidden="true"></i></a></li>
+		<li><a href="javascript:void(0);"><i class="fa fa-star assign_rating" aria-hidden="true"></i></a></li>
+	</ul>	
+
+</body>
+</html>

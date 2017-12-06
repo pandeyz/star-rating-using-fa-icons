@@ -29,6 +29,14 @@
 			// Fill the stars with the given range
 			$('.assign_rating').slice(start, count).addClass('fa fa-star red');
 		});
+		/*
+		// If the stars are available in different container
+		$(document).ready(function(){
+		  $(document).on('click', '.assign_rating', function(){
+		    alert($(this).closest('.rating').find('.assign_rating').index(this));
+		  });
+		});
+		*/
 	});
 	</script>
 
